@@ -1,65 +1,57 @@
-# 🎬 Amazing Movie Recommender
+# 🍿 Amazing Movie Recommender
 
-Welcome to the **Amazing Movie Recommender** — a personalized project built and customized by **A.V. Bharath Kumar Reddy** for portfolio use. This tool helps users discover movies similar to their favorites based on content similarity and real-time poster data from TMDB.
+Your intelligent personal assistant for discovering your next favorite film — powered by AI, TMDB API, and Streamlit.
 
-> _“Customized, modified, and deployed by Bharath as part of his Data Science learning journey.”_
-
----
-
-## 💡 About This Project
-
-This project was adapted and enhanced from open-source logic with meaningful improvements:
-- Cleaned UI/UX using **Streamlit**
-- Real-time movie posters with **TMDB API**
-- Case-insensitive matching and error handling
-- Added custom portfolio credits and .env security
-
-🎯 Goal: Learn recommendation systems, Python tools, and API integration hands-on.
+> "Enter any movie name, and watch the magic happen."
 
 ---
 
-## 🚀 Try It Live
+## 🌟 Features
 
-👉 [Amazing Movie Recommender – Deployed on Streamlit](https://your-deployed-app-link.streamlit.app)
-
-> *(Replace the above link with your actual Streamlit app URL once deployed)*
-
----
-
-## 📦 Tech Stack
-
-- `Python`  
-- `Pandas`, `Pickle`, `Requests`, `dotenv`  
-- `Streamlit` (Web App Framework)  
-- `TMDB API` for real movie posters
+- 🔍 Enter a movie title and get the **most relevant** and **visually matched** movie suggestions
+- 🧠 Uses **cosine similarity** + **TMDB API** for high-accuracy content-based filtering
+- 🎥 Dynamic poster display and updated visuals
+- ⚡ Fast, simple, and deployable with a click
 
 ---
 
-## 🧠 How It Works
+## 🧪 Tech Stack
 
-1. The user selects a movie title from a dropdown list.
-2. The app uses a **precomputed similarity matrix** to find the top similar movies.
-3. Posters are fetched dynamically from **The Movie Database (TMDB)**.
-4. If a movie isn't found, the app shows friendly feedback.
+- Python 3.11
+- Pandas
+- scikit-learn
+- Pickle
+- Streamlit
+- TMDB API
 
 ---
 
-## 🖥️ Run It Locally
+## 📸 Screenshots
+
+(https://github.com/user-attachments/assets/9793732e-a057-4475-999c-8101d3cf992f)
+(https://github.com/user-attachments/assets/b8334b3a-cd60-409f-88e4-dbae761383f4)
+(https://github.com/user-attachments/assets/473fcaa7-5841-4c04-a350-2b8a7da7d58b)
+(https://github.com/user-attachments/assets/b7611fa7-42cb-405a-9b22-9d02ee4145bd)
+
+
+
+*(Replace with your screenshots named and saved in the `screenshots/` folder)*
+
+---
+
+## 🔧 How to Run Locally
 
 ```bash
-# Clone the project
-git clone https://github.com/YOUR_USERNAME/netflix-recommender-app.git
-cd netflix-recommender-app
+# Clone the repository
+git clone https://github.com/bharathkumarreddy007/amazing-movie-recommender.git
+cd amazing-movie-recommender
 
-# Optional: Create virtual environment
+# Optional: create a virtual environment
 python -m venv venv
-venv\Scripts\activate  # Windows
+venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Add your TMDB API key to a `.env` file like:
-# API_KEY=your_actual_tmdb_api_key
-
-# Launch the app
+# Run the app
 streamlit run deploy.py
