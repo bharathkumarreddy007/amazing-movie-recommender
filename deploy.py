@@ -5,11 +5,9 @@ import streamlit as st
 import pandas as pd
 import pickle
 import requests
-import os
-from dotenv import load_dotenv
 
-load_dotenv()  # Load API key from .env
-API_KEY = os.getenv("API_KEY")
+# ✅ Load API key securely from Streamlit Secrets
+API_KEY = st.secrets["API_KEY"]
 
 # Fetch movie poster using TMDB API
 def fetch_poster(movie_id):
@@ -33,7 +31,7 @@ def recommendation(title, data):
 
     movie_index = data[data['normalized_title'] == normalized_title].index[0]
     distances = similarity_matrix[movie_index]
-    movies_list = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[:10]  # includes selected
+    movies_list = sorted(list(enumerate(distances)), reverse=True, key=lambda x: x[1])[:10]
 
     recommended_movies = []
     for i in movies_list:
